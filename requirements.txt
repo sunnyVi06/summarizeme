@@ -1,0 +1,4 @@
+flask
+sumy
+nltk
+

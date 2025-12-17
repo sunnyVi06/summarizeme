@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lightweight Text Summarizer</title>
+</head>
+<body>
+
+<h2>Lightweight Text Summarizer</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+    <p><b>Paste Text:</b></p>
+    <textarea name="text" rows="10" cols="80" placeholder="Paste text here..."></textarea>
+
+    <p><b>OR Upload TXT File:</b></p>
+    <input type="file" name="file" accept=".txt">
+
+    <br><br>
+    <button type="submit">Summarize</button>
+</form>
+
+{% if summary %}
+    <h3>Summary:</h3>
+    <pre>{{ summary }}</pre>
+
+    <a href="/download">
+        <button>Download Summary as TXT</button>
+    </a>
+{% endif %}
+
+</body>
+</html>
